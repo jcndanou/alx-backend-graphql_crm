@@ -1,7 +1,8 @@
 # crm/tasks.py
 import os
 import logging
-import time
+from datetime import datetime
+import requests
 from celery import shared_task
 from gql import Client, gql
 from gql.transport.aiohttp import AIOHTTPTransport

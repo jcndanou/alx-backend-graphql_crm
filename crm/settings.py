@@ -1,5 +1,6 @@
 from celery.schedules import crontab
 
+VAR = "django_celery_beat"
 CELERY_BEAT_SCHEDULE = {
     'generate-crm-report': {
         'task': 'crm.tasks.generate_crm_report',
