@@ -1,16 +1,13 @@
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'graphene_django',
-    'django_filters',
-    'crm',
-    'django_crontab'
-]
+from celery.schedules import crontab
 
+CELERY_BEAT_SCHEDULE = {
+    'generate-crm-report': {
+        'task': 'crm.tasks.generate_crm_report',
+        'schedule': crontab(day_of_week='mon', hour=6, minute=0),
+        'args': (),
+        'options': {'queue': 'default'},
+    },
+}
 # Configuration des tâches cron
 CRONJOBS = [
     # Exécute la fonction log_crm_heartbeat toutes les heures

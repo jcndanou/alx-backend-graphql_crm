@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'graphene_django',
     'django_filters',
     'crm',
-    'django_crontab'
+    'django_crontab',
+    'django_celery_beat'
 ]
 
 MIDDLEWARE = [
@@ -101,6 +102,13 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# Le broker est le service qui gère la file d'attente des tâches
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
+# Le backend pour stocker les résultats des tâches
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+# Le fuseau horaire
+CELERY_TIMEZONE = "Europe/Paris"
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
