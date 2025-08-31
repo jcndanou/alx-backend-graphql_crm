@@ -1,4 +1,5 @@
 import graphene
+from django.db import transaction
 from graphene_django import DjangoObjectType
 from django.core.exceptions import ValidationError
 from graphene_django.filter import DjangoFilterConnectionField
@@ -178,10 +179,58 @@ class CreateOrder(graphene.Mutation):
             return CreateOrder(order=None, success=False, errors=str(e))
 
 
+class UpdateLowStockProducts(graphene.Mutation):
+    class Arguments:
+        min_stock = graphene.Int(description="Seuil de stock minimum", default_value=10)
+        increment_by = graphene.Int(description="Quantité à ajouter", default_value=50)
+
+    success = graphene.Boolean()
+    message = graphene.String()
+    updated_count = graphene.Int()
+
+    @transaction.atomic
+    def mutate(self, info, min_stock=10, increment_by=50):
+        try:
+            # Trouver les produits avec stock faible
+            low_stock_products = Product.objects.filter(stock_quantity__lt=min_stock)
+
+            # Compter le nombre de produits à mettre à jour
+            count = low_stock_products.count()
+
+            if count == 0:
+                return UpdateLowStockProducts(
+                    success=True,
+                    message="Aucun produit avec stock faible trouvé",
+                    updated_count=0
+                )
+
+            # Mettre à jour le stock
+            updated_products = []
+            for product in low_stock_products:
+                product.stock_quantity += increment_by
+                updated_products.append(product)
+
+            # Sauvegarder en bulk pour plus d'efficacité
+            Product.objects.bulk_update(updated_products, ['stock_quantity'])
+
+            return UpdateLowStockProducts(
+                success=True,
+                message=f"{count} produits avec stock faible mis à jour",
+                updated_count=count
+            )
+
+        except Exception as e:
+            return UpdateLowStockProducts(
+                success=False,
+                message=f"Erreur lors de la mise à jour: {str(e)}",
+                updated_count=0
+            )
+
 # Regroupe toutes les mutations
 class Mutation(graphene.ObjectType):
     create_customer = CreateCustomer.Field()
     create_product = CreateProduct.Field()
     create_order = CreateOrder.Field()
+    update_low_stock_products = UpdateLowStockProducts.Field()
 
 schema = graphene.Schema(query=Query, mutation=Mutation)

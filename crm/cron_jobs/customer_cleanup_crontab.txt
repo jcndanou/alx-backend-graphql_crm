@@ -1,0 +1,2 @@
+# Nettoyage des clients inactifs - tous les dimanches à 2h00
+0 2 * * 0 /alx-backend-graphql_crm/crm/cron_jobs/clean_inactive_customers.sh

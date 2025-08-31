@@ -1,0 +1,2 @@
+# Rappel des commandes - tous les jours à 8h00
+0 8 * * * /.venv/Scripts/python alx-backend-graphql_crm/crm/cron_jobs/send_order_reminders.py

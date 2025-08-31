@@ -5,26 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df5ece41-0285-4d8a-98f8-6483a06e371a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/alx-backend-graphql_crm.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alx_backend_graphql/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alx_backend_graphql/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alx_backend_graphql/schema.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alx_backend_graphql/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alx_backend_graphql/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alx_backend_graphql/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm/filters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm/schema.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm/cron.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm/cron_jobs/clean_inactive_customers.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm/cron_jobs/customer_cleanup_crontab.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm/cron_jobs/order_reminders_crontab.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm/cron_jobs/send_order_reminders.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alx_backend_graphql/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/alx_backend_graphql/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm/schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/crm/schema.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +29,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="31gapzK2pKEvwlUFwnrb0Plv5ED" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -52,16 +40,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/jcnda/Documents/GitHub/alx-backend-graphql_crm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jcnda/Documents/GitHub/alx-backend-graphql_crm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jcnda\Documents\GitHub\alx-backend-graphql_crm" />
