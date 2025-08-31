@@ -17,7 +17,7 @@ def log_crm_heartbeat():
     """
     try:
         # Chemin du fichier de log
-        log_file = '/tmp/crm_heartbeat.log'
+        log_file = '/tmp/crm_heartbeat_log.txt'
 
         # Heure actuelle
         now = timezone.now()

@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df5ece41-0285-4d8a-98f8-6483a06e371a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/crm/cron.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm/cron_jobs/clean_inactive_customers.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm/cron_jobs/customer_cleanup_crontab.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm/cron_jobs/order_reminders_crontab.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm/cron_jobs/send_order_reminders.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alx_backend_graphql/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/alx_backend_graphql/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm/schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/crm/schema.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
