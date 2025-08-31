@@ -131,7 +131,7 @@ def update_low_stock():
             logger.error(message)
 
         # Écrire dans le fichier log
-        log_file = '/tmp/stock_update.log'
+        log_file = '/tmp/low_stock_updates_log.txt'
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
         with open(log_file, 'a', encoding='utf-8') as f:
@@ -145,7 +145,7 @@ def update_low_stock():
 
         # Écrire l'erreur dans le fichier log
         try:
-            with open('/tmp/stock_update.log', 'a', encoding='utf-8') as f:
+            with open('/tmp/low_stock_updates_log.txt', 'a', encoding='utf-8') as f:
                 timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                 f.write(f"[{timestamp}] ERROR: {error_message}\n")
         except:
